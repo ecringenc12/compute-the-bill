@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+	int sen,kota;
+	printf("Aylik internet limitiniz nedir ?");
+	scanf("%d",&sen);
+	printf("Aylik harcadiginiz toplam kota kactir ?");
+	scanf("%d",&kota);
+	if(kota<=sen)
+	{
+		printf("Fatura ucretiniz sabittir. 150TL\n");
+	}
+	if(kota>sen && kota-sen<=5)
+	{
+		printf("Bu ayki asilmis fatura ucretiniz-> %d",(((kota-sen)*20)+150));
+	}
+	if(kota>sen && kota-sen>5)
+	{
+		printf("Bu ayki asilmis fatura ucretiniz-> %d",((5*20)+(((kota-sen)-5)*35)+150));
+	}
+	return 0;
+}
